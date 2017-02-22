@@ -5,12 +5,12 @@ class Hanoi():
         self.n = n
         self.bar = []
         for i in range(3):
-            self.bar.append([])             # Create m bars.
+            self.bar.append([])             # Create 3 bars.
         self.bar[0] = range(1, n+1)              # Fill the first bar with plates in order.
         for i in range(n):
             self.bar[1].append(None)
             self.bar[2].append(None)        # Fill the next two bars with None.
-        self.dic = {0:'A', 1:'B', 2:'C'}   # Create a dic to map the figure and bars.
+        self.dic = {0:'A', 1:'B', 2:'C'}   # Create a dic to map figures and bars.
 
     def move(self, n, a=0, b=2):
         for i in range(3):
